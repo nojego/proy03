@@ -1,0 +1,189 @@
+.video {
+    position: relative;
+    margin-top: 26px;
+}
+.video-inner {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    overflow: hidden;
+    width: 100%;
+}
+
+.video-open:checked + .video-item {
+    position: static;
+    opacity: 100;
+}
+
+.video-item {
+    position:absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+}
+
+
+.video-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.video-control.prev {
+    left: 2%;
+}
+
+.video-control.next {
+    right: 2%;
+}
+
+.video-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+/* Control para el Primer Carrousel */
+
+#video-1-1:checked ~ .control-1-1,
+#video-2-1:checked ~ .control-2-1,
+#video-3-1:checked ~ .control-3-1 {
+    display: block;
+}
+ /* Control para el Segundo Carrousel */
+
+#video-1-2:checked ~ .control-1-2,
+#video-2-2:checked ~ .control-2-2,
+#video-3-2:checked ~ .control-3-2 {
+    display: block;
+}
+
+/* Control para el Tercer Carrousel */
+
+#video-1-3:checked ~ .control-1-3,
+#video-2-3:checked ~ .control-2-3,
+#video-3-3:checked ~ .control-3-3 {
+    display: block;
+}
+/* Control para el Cuarto Carrousel */
+
+#video-1-4:checked ~ .control-1-4,
+#video-2-4:checked ~ .control-2-4,
+#video-3-4:checked ~ .control-3-4 {
+    display: block;
+}
+/* Control para el Quinto Carrousel */
+
+#video-1-5:checked ~ .control-1-5,
+#video-2-5:checked ~ .control-2-5,
+#video-3-5:checked ~ .control-3-5 {
+    display: block;
+}
+
+
+.video-indicador {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.video-indicador li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.video-circulo {
+    color: #828282;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.video-circulo:hover {
+    color: #aaaaaa;
+}
+
+/* Control para el Primer Carrousel */
+#video-1-1:checked ~ .control-1-1 ~ .video-indicador 
+     li:nth-child(1) .video-circulo,
+#video-2-1:checked ~ .control-2-1 ~ .video-indicador 
+      li:nth-child(2) .video-circulo,
+#video-3-1:checked ~ .control-3-1 ~ .video-indicador 
+      li:nth-child(3) .video-circulo {
+    color: #428bca;
+}
+
+   /* Control para el Segundo  Carrousel */
+#video-1-2:checked ~ .control-1-2 ~ .video-indicador 
+     li:nth-child(1) .video-circulo,
+#video-2-2:checked ~ .control-2-2 ~ .video-indicador 
+      li:nth-child(2) .video-circulo,
+#video-3-2:checked ~ .control-3-2 ~ .video-indicador 
+      li:nth-child(3) .video-circulo {
+    color: #428bca;
+}
+
+/* Control para el Tercer  Carrousel */
+#video-1-3:checked ~ .control-1-3 ~ .video-indicador 
+     li:nth-child(1) .video-circulo,
+#video-2-3:checked ~ .control-2-3 ~ .video-indicador 
+      li:nth-child(2) .video-circulo,
+#video-3-3:checked ~ .control-3-3 ~ .video-indicador 
+      li:nth-child(3) .video-circulo {
+    color: #428bca;
+}
+
+/* Control para el Cuarto  Carrousel */
+    #video-1-4:checked ~ .control-1-4 ~ .video-indicador 
+     li:nth-child(1) .video-circulo,
+    #video-2-4:checked ~ .control-2-4 ~ .video-indicador 
+      li:nth-child(2) .video-circulo,
+    #video-3-4:checked ~ .control-3-4 ~ .video-indicador 
+      li:nth-child(3) .video-circulo {
+    color: #428bca;
+}
+/* Control para el Quinto  Carrousel */
+    #video-1-5:checked ~ .control-1-5 ~ .video-indicador 
+     li:nth-child(1) .video-circulo,
+    #video-2-5:checked ~ .control-2-5 ~ .video-indicador 
+      li:nth-child(2) .video-circulo,
+    #video-3-5:checked ~ .control-3-5 ~ .video-indicador 
+      li:nth-child(3) .video-circulo {
+    color: #428bca;
+}
+
+
+#titulo {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
+         -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
